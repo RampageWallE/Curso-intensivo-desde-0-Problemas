@@ -12,10 +12,10 @@ while opcion !=0:
     [1] Ingresar un nuevo registro
     [2] Buscar registros por nombres   
     [3] Mostrar todos los registros   
-    [4] Cerrar programa      
+    [0] Cerrar programa      
           """)
     
-    opcion=int(input("  ingrese la opcion que desee:\t"))   
+    opcion=int(input("  ingrese la opcion que desee:\t"))  
     if opcion==1:
         print("INGRESE EL NOMBRE Y NUMERO DE CELULAR DE LA PERSONA")
         nombre=str(input("NOMBRE DE LA PERSONA:\t"))
@@ -38,5 +38,4 @@ while opcion !=0:
     elif opcion==0:
         break
     else:
-        print("Ingrese una opcion valida")
-        
+        print(" INGRESE UNA OPCION VALIDA")
