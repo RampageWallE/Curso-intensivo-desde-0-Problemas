@@ -13,22 +13,23 @@ while opcion != 0:
         response = requests.get(url)
 
     elif opcion == 2:
-        if response.status_code == 200:
+        try:
             print("Se logro conectar con exito")
             respuesta = response.json()
             temp_min = respuesta['main']['temp']
             temp_max = respuesta['main']['temp_max']
             print(f"La temperatura minima en {lugar} es:\t", temp_min)
             print(f"La temperatura maxima en {lugar} es:\t", temp_max)
-        else:
+        #else:
+        except:
             print("No se logro conectar a la API, ingrese un lugar valido")
 
     elif opcion == 3:
-        if response.status_code == 200:
+        try:
             print("Se logro conectar con exito")
             respuesta = response.json()
             print(respuesta)
-        else:
+        except:
             print("No se logro conectar a la API, ingrese un lugar valido")
     else: 
         break
